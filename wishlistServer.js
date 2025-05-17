@@ -7,9 +7,9 @@ const app = express();
 const portNumber = 5000;
 const router  = express.Router(); 
 
-require("dotenv").config({
-    path: path.resolve(__dirname, "credentials/.env"),
- });
+// require("dotenv").config({
+//     path: path.resolve(__dirname, "credentials/.env"),
+//  });
 //MULTER: FOR IMAGES
 const multer = require('multer');
 
