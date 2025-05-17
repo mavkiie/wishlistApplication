@@ -1,0 +1,24 @@
+<!--will show the entire wishlist-->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Current Wishlist</title>
+</head>
+
+<body>
+    <h1><%- wishlist.title %></h1>
+    Name: <%-name %><br>
+    Price:<%-price %><br>
+    Store: <%-store %><br>
+    <a href="/createWishlist/<%= wishlistTitle %>/addItems">Add Another Item</a> <br><!-- a url to go back to home page-->
+    <a href="<%= baseUrl %>">HOME</a> <br>
+    <% if (imagePath) { %>
+        <p><strong>Image:</strong><br>
+        <img src="<%= imagePath %>" alt="Item Image" width="200"></p>
+      <% } %>
+        
+</body>
+
+</html>

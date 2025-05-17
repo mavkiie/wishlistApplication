@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Wishlist</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <h1 id="processAdd-header-styling">Item Added to <%- wishlistTitle %></h1>
+  <div id="processAddItems-main-container">
+    <div id="processAddItems-left-container">
+      <p class="item-info-tags">Name: <%- name %><br></p>
+      <p class="item-info-tags">Price: $<%- price %><br></p>
+      <p class="item-info-tags">Store: <%- store %><br></p>
+      <p class="item-info-tags" >Category:  <%- category %><br></p>
+  
+      <% if (exchangeInfo) { %>
+        <p class="item-info-tags"><%= exchangeInfo %></p>
+      <% } %>
+      <a class="form-button-styling" href="/createWishlist/<%= wishlistTitle %>/addItems">Add Another Item</a><br>
+    </div>
+    <div id="image-container">
+      <% if (imagePath) { %>
+        <img class="image-styling" src="<%= imagePath %>" alt="Item Image" width="200"></p>
+      <% } %>
+    </div>
+  </div>
+  <div id="processAdd-home-page-link">
+    <a class="form-button-styling" href="/">HOME</a>
+  </div>
+  
+</body>
+
+</html>

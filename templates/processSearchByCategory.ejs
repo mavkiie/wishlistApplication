@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items in <%= categoryName %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="processCategory-container">
+    <h1 class="header-styling" >Items in Category: <%= categoryName %></h1>
+  <% if (items.length === 0) { %>
+    <p>No items found for this category.</p>
+  <% } else { %>
+    <table>
+      <tr>
+        <th>Wishlist</th>
+        <th>Name</th>
+        <th>Price &#40;<%= currency %>&#41;</th>
+        <th>Store</th>
+        <th>Image</th>
+      </tr>
+      <% items.forEach(item => { %>
+        <tr>
+          <td><%= item.wishlistTitle %></td>
+          <td><%= item.name %></td>
+          <td>$<%= item.price %></td>
+          <td><%= item.store %></td>
+          <td><img class="image-styling" src="<%= item.imagePath %>" width="200"></td>
+        </tr>
+      <% }) %>
+    </table>
+  <% } %>
+  </div>
+  <div class ="homepage">
+    <a class="form-button-styling" href="/searchByCategory">Search Again</a>
+    <a class="form-button-styling" href="/">Home Page</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!--INDEX HOME PAGE-->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revisit Wishlist</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="revisit-wishlist-container">
+        <h1 class="header-styling">Need to go back to a wishlist?</h1>
+        <form action="/processRevisitWishlist" method="post">
+            <p class="form-qs"> Enter the name of your wishlist</p>
+            <input type="text" name="wishlistName"><br>
+            <input class= "submit-button-styling" type="submit" value="Get Wishlist">
+        </form>
+    </div>
+    <div id="revisit-wishlist-homepage-link">
+        <a class="form-button-styling" href="<%= baseUrl %>">Home Page</a> <!-- a url to go back to home page-->
+    </div>
+</body>
+
+</html>

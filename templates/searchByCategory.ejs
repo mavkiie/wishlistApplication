@@ -1,0 +1,25 @@
+<!--INDEX HOME PAGE-->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revisit Wishlist</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+<body>
+    <div id="search-container">
+        <h1 class="header-styling">Search Wishlist Items By Category</h1>
+        <form action="/processSearchByCategory" method="post">
+            <p class="form-qs">What category of items do you want to display?</p>
+            <input type="text" name="categoryName"><br>
+            <input class= "submit-button-styling" type="submit" value="Get Items">
+        </form>
+    </div>
+    <div class="homepage">
+        <a class="form-button-styling" href="/">home page</a> <!-- a url to go back to home page-->
+    </div>
+</body>
+
+</html>

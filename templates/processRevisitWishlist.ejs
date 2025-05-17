@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Wishlist</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="revisit-wishlist-container">
+    <%- wishlistTable %>
+    <form id="revisit-delete-btn" action="/processDeleteWishlist" method="post" id="delete">
+      <input type="hidden" name="wishlistName" value="<%= wishlistTitle %>">
+      <input class="form-button-styling" type="submit" value="Delete Wishlist">
+    </form>
+    <div id="revisit-addItem-btn">
+      <a class="form-button-styling" href="/createWishlist/<%= wishlistTitle %>/addItems">Add Another Item</a><br>
+    </div>
+  </div>
+  <div id="revisit-homepage-link">
+    <a class="form-button-styling" href="/">Home Page</a><br>
+  </div>
+  <script>
+     // Wait until the page loads
+     window.onload = function () {
+            const form = document.getElementById("delete");
+
+            form.onsubmit = function (event) {
+                const confirmSubmit = confirm("Are you sure you want to delete this wishlist? It will be gone forever!!");
+                if (!confirmSubmit) {
+                    // Cancel submission
+                    event.preventDefault();
+                }
+             };
+        }
+  </script>
+</body>
+
+</html>

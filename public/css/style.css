@@ -1,0 +1,331 @@
+body{
+    padding-top:50px;
+    padding-bottom: 50px;
+    background-color: #e9edc9;
+}
+#headers{
+    text-align: center;
+}
+#wishlist-header{
+    font-size: 70px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #426B1F;
+    background: -webkit-linear-gradient(#386641,  #fde1de);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #386641;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#wishlist-subheader{
+    font-size: 25px;
+    margin-top: -30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #344e41;
+
+    
+}
+#links-container{
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+}
+.link-styling{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #3a5a40;
+    text-decoration: none;
+    margin-top:20px;
+    font-size: 30px;
+    border-radius: 20px;
+    border: 5px solid #588157;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    transition: all 0.3s ease;
+}
+.link-styling:hover {
+    transform: scale(1.08);
+}
+#form-container{
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fde1de;
+    border: 5px solid #3a5a40;
+    width:500px;
+    margin:auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+   
+}
+.header-styling{
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color:#3a5a40;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#386641,  #ffd8d3);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #386641;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.form-qs{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:30px;
+}
+.wishlist-title-textbox{
+    width:250px;
+    height: 24px;
+    margin-top:0px;
+}
+.text-box-sizing{
+    height:60px;
+    width:250px;
+}
+.submit-button-styling{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #588157;
+    border: 5px solid #3a5a40;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    color: white;
+
+}
+#home-page-link-container{
+    text-align:center;
+    margin-top: 30px;
+}
+.form-button-styling{
+    padding-left:35px;
+    padding-right:35px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #588157;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 5px solid #3a5a40;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+#addItems-container{
+    text-align:center;
+    border: 5px solid #3a5a40;
+    width:500px;
+    margin:auto;
+    border-radius: 20px;
+    background-color: #fde1de;
+
+}
+#processAddItems-left-container{
+    text-align:center;
+}
+.image-styling{
+    border: 5px solid #588157;
+    border-radius: 10px;
+}
+.item-info-tags{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:20px;
+    text-align: left;
+}
+#processAddItems-main-container{
+    display: flex;
+    justify-content: space-around;
+    width:500px;
+    margin:auto;
+    border: 5px solid #3a5a40;
+    border-radius:20px;
+    padding-top:20px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #fde1de;
+
+
+}
+#processAdd-header-styling{
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a5a40;
+    text-align:center;
+    text-transform:uppercase;
+}
+#processAdd-home-page-link{
+    text-align: center;
+    margin-top:30px;
+}
+#revisit-wishlist-container{
+    text-align: center;
+    border: 5px solid #3a5a40;
+    border-radius:20px;
+    padding-top:20px;
+    width:600px;
+    margin:auto;
+    padding-bottom:30px;
+    padding-right:20px;
+    background-color: #fde1de;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#revisit-wishlist-homepage-link{
+    text-align: center;
+    margin-top:30px;
+
+}
+#revisit-wishlist-title{
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a5a40;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+#revisit-wishlist-desc{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size:20px;
+}
+table{
+    margin:auto;
+    border-collapse: collapse;
+    border: 5px solid #3a5a40;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+th {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size:20px;
+    color: #3a5a40;
+    text-transform: uppercase;
+    padding-top: 30px;
+
+}
+td{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size:20px;
+}
+
+#revisit-homepage-link{
+    text-align: center;
+    padding-top:30px;
+    padding-bottom:40px;
+}
+#revisit-delete-btn{
+    padding-top: 30px;
+}
+
+#revisit-addItem-btn{
+    margin-top:30px;
+}
+#getTotal-container{
+    text-align:center;
+    border: 5px solid #3a5a40;
+    border-radius:20px;
+    width: 600px;
+    margin:auto;
+    background-color: #fde1de;
+
+}
+#getTotal-homepage-link{
+    text-align: center;
+    margin-top: 30px;
+}
+#processTotal-container{
+    text-align:center;
+    border: 5px solid #3a5a40;
+    border-radius:20px;
+    width: 600px;
+    margin:auto;
+    background-color: #fde1de;
+}
+#processTotal-homepage-link{
+    text-align: center;
+    margin-top: 30px;
+
+}
+#search-container{
+    text-align:center;
+    border: 5px solid #3a5a40;
+    border-radius:20px;
+    width: 600px;
+    margin:auto;
+    background-color: #fde1de;
+}
+.homepage{
+    text-align: center;
+    margin-top: 30px;
+}
+#processCategory-container{
+    text-align: center;
+    background-color: #fde1de;
+    border: 10px solid #3a5a40;
+    border-radius:20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#deleteWishlist-container{
+    text-align:center;
+    background-color: #fde1de;
+    border: 5px solid #3a5a40;
+    width: 600px;
+    margin: auto;
+    border-radius: 20px;
+}
+#deleteAll-homepage{
+    text-align:center;
+    padding-top: 30px;
+}
+
+#deletedWishlists-container{
+    margin:auto;
+    text-align: center;
+    background-color: #fde1de;
+    border-radius: 20px;
+    border: 5px solid #3a5a40;
+    width:500px;
+}
+#deletedOneWishlist-container{
+    margin:auto;
+    text-align: center;
+    background-color: #fde1de;
+    border-radius: 20px;
+    border: 5px solid #3a5a40;
+    width:600px;
+
+}
