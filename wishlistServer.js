@@ -7,9 +7,9 @@ const app = express();
 const portNumber = 5000;
 const router  = express.Router(); 
 
-// require("dotenv").config({
-//     path: path.resolve(__dirname, "credentials/.env"),
-//  });
+require("dotenv").config({
+    path: path.resolve(__dirname, "credentials/.env"),
+ });
 //MULTER: FOR IMAGES
 const multer = require('multer');
 
@@ -39,6 +39,8 @@ async function getColl() {
 
 app.set("view engine", "ejs"); //sets the template user to ejs
 app.set("views", path.resolve(__dirname, "templates"));
+//body parser comes before the router
+app.use(bodyParser.urlencoded({extended:false})); //body parser
 app.use("/", router);
 
 //displays index page (USES ROUTER!)
@@ -51,7 +53,7 @@ app.get("/createWishlist", (req, res) => {
 	res.render("createWishlist", variables);
 });
 
-app.use(bodyParser.urlencoded({extended:false})); //body parser
+
 // POST /createWishlist  (server)
 app.post("/createWishlist", async (req, res, next) => {
     try {
@@ -110,10 +112,10 @@ app.post("/createWishlist/:id/processAddToWishlist", upload.single('itemImage'),
       }
     }
 
-    // File path (relative to public folder)
+    //file path (relative to public folder)
     const imagePath = req.file ? `/uploads/${req.file.filename}` : null;
 
-    // Update wishlist with new item
+    //update wishlist with new item
     await coll.updateOne(
       { id: id },
       { $push: {
@@ -132,7 +134,7 @@ app.post("/createWishlist/:id/processAddToWishlist", upload.single('itemImage'),
       }
     );
 
-     res.render("processAddToWishlist", {  // or the filename you are using
+     res.render("processAddToWishlist", {  //or the filename you are using
       name,
       price: convertedPrice.toFixed(2),
       store,
@@ -166,7 +168,7 @@ app.post("/processRevisitWishlist", async (req, res) => {
       return res.send("Wishlist not found.");
     }
 
-    // Construct HTML table of items
+    //construct HTML table of items
     let wishlistTable = `<h2 id="revisit-wishlist-title">${wishlist.title}</h2><p id="revisit-wishlist-desc">${wishlist.description}</p>`;
     wishlistTable += `<table><thead><tr><th>Item Name</th><th>Price (${wishlist.items[0].currency})</th><th>Store</th><th>Image</th></tr></thead><tbody>`;
 
@@ -225,14 +227,14 @@ app.post("/processDeleteWishlist", async (req, res) => {
   }
 });
 
-//revisits a wishlist (gets page)
-app.get("/getTotalOfWishlist", (req, res) => {
+//revisits a wishlist (gets page) (USES ROUTER!)
+router.get("/getTotalOfWishlist", (req, res) => {
   res.render("getTotalOfWishlist");
 
 });
 
 //revisits a wishlist (gets page)
-app.post("/processGetTotal", async (req, res) => {
+router.post("/processGetTotal", async (req, res) => {
   const {wishlistName} = req.body;
 
   try {
