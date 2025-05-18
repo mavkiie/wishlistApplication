@@ -6,7 +6,7 @@ const { MongoClient, ObjectId, ServerApiVersion } = require("mongodb"); //for mo
 const app = express();  
 const portNumber = 5000;
 const router  = express.Router(); 
-
+//commented out for render
 // require("dotenv").config({
 //     path: path.resolve(__dirname, "credentials/.env"),
 //  });
@@ -49,8 +49,8 @@ router.get("/", (req, res) => {
 });
 //displays index page
 app.get("/createWishlist", (req, res) => {
-    const variables ={baseUrl: `http://localhost:${portNumber}`};
-	res.render("createWishlist", variables);
+
+	res.render("createWishlist");
 });
 
 
@@ -143,7 +143,6 @@ app.post("/createWishlist/:id/processAddToWishlist", upload.single('itemImage'),
       imagePath,
       exchangeInfo,
       wishlistTitle: id,
-      baseUrl: `http://localhost:${portNumber}`
     });
   } catch (err) {
     next(err);
@@ -151,14 +150,12 @@ app.post("/createWishlist/:id/processAddToWishlist", upload.single('itemImage'),
 });
 //revisits a wishlist (gets page)
 app.get("/revisitWishlist", (req, res) => {
-  const variables = {baseUrl: `http://localhost:${portNumber}`};
-  res.render("revisitWishlist", variables);
+  res.render("revisitWishlist");
 
 });
 
 app.post("/processRevisitWishlist", async (req, res) => { 
   const { wishlistName } = req.body;
-  const baseUrl = `http://localhost:${portNumber}`;
 
   try {
     const coll = await getColl();
@@ -186,7 +183,6 @@ app.post("/processRevisitWishlist", async (req, res) => {
     const variable = {
       wishlistTable,
       wishlistTitle: wishlist.id,
-      baseUrl
     };
 
     res.render("processRevisitWishlist", variable);
@@ -199,7 +195,6 @@ app.post("/processRevisitWishlist", async (req, res) => {
 
 app.post("/processDeleteWishlist", async (req, res) => {
   const { wishlistName } = req.body; // this is the id, not the display title
-  const baseUrl = `http://localhost:${portNumber}`;
 
   try {
     const coll = await getColl();
@@ -216,7 +211,6 @@ app.post("/processDeleteWishlist", async (req, res) => {
 
     const variables = {
       wishlistName: wishlist.title, // use the display-friendly title
-      baseUrl
     };
 
     res.render("processDeleteWishlist", variables);

@@ -111,11 +111,19 @@ body{
     margin-top:20px;
     margin-bottom: 20px;
     color: white;
+    transition: all 0.3s ease;
 
+}
+.submit-button-styling:hover{
+    transform: scale(1.08);
 }
 #home-page-link-container{
     text-align:center;
     margin-top: 30px;
+    transition: all 0.3s ease;
+}
+#home-page-link-container:hover{
+    transform: scale(1.1);
 }
 .form-button-styling{
     padding-left:35px;
@@ -131,7 +139,9 @@ body{
     font-weight: 400;
     font-style: normal;
     color: white;
+
 }
+
 #addItems-container{
     text-align:center;
     border: 5px solid #3a5a40;
@@ -199,7 +209,11 @@ body{
 #revisit-wishlist-homepage-link{
     text-align: center;
     margin-top:30px;
+    transition: all 0.3s ease;
 
+}
+#revisit-wishlist-homepage-link:hover{
+    transform: scale(1.08);
 }
 #revisit-wishlist-title{
     font-size: 50px;
@@ -265,6 +279,10 @@ td{
 #getTotal-homepage-link{
     text-align: center;
     margin-top: 30px;
+    transition: all 0.3s ease;
+}
+#getTotal-homepage-link:hover{
+    transform: scale(1.08);
 }
 #processTotal-container{
     text-align:center;
@@ -290,6 +308,10 @@ td{
 .homepage{
     text-align: center;
     margin-top: 30px;
+    transition: all 0.3s ease;
+}
+.homepage:hover{
+    transform: scale(1.08);
 }
 #processCategory-container{
     text-align: center;
