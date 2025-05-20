@@ -269,7 +269,6 @@ app.get("/deleteAllWishlists", (req, res) => {
 
 //revisits a wishlist (gets page)
 app.post("/processDeleteAllWishlists", async (req, res) => {
-
   try {
     const coll = await getColl();
     const filter = {}

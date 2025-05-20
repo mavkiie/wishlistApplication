@@ -3,13 +3,18 @@ body{
     padding-bottom: 50px;
     background-color: #e9edc9;
 }
+input, textarea{
+    border: 5px solid #588157;
+    border-radius: 10px;
+}
+
 #headers{
     text-align: center;
 }
 #wishlist-header{
     font-size: 70px;
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
     color: #426B1F;
     background: -webkit-linear-gradient(#386641,  #fde1de);
@@ -83,9 +88,10 @@ body{
 }
 .form-qs{
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-size:30px;
+    color: #3a5a40;
 }
 .wishlist-title-textbox{
     width:250px;
@@ -164,6 +170,7 @@ body{
     font-style: normal;
     font-size:20px;
     text-align: left;
+    margin-bottom: 30px;
 }
 #processAddItems-main-container{
     display: flex;
@@ -192,6 +199,10 @@ body{
 #processAdd-home-page-link{
     text-align: center;
     margin-top:30px;
+    transition: all 0.3s ease;
+}
+#processAdd-home-page-link:hover{
+    transform: scale(1.08);
 }
 #revisit-wishlist-container{
     text-align: center;
@@ -350,4 +361,10 @@ td{
     border: 5px solid #3a5a40;
     width:600px;
 
+}
+#homepage-buttons-grouping{
+    display:flex; 
+    justify-content: space-evenly; 
+    width: 500px; 
+    margin:auto;
 }
